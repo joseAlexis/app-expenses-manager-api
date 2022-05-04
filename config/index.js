@@ -7,8 +7,6 @@ const connectionParams = {
     useUnifiedTopology: true
 }
 
-
-
 module.exports = {
     connectDB: function () {
         return mongoose.connect(url, connectionParams).then(() => {
