@@ -7,12 +7,6 @@ const connectionParams = {
     useUnifiedTopology: true
 }
 
-module.exports = {
-    connectDB: function () {
-        return mongoose.connect(url, connectionParams).then(() => {
-            console.log('Connected to the database :)')
-        }).catch((err) => {
-            console.error(`Error connecting to the database. n${err}`);
-        });
-    }
+module.exports.connect = async () => {
+    await mongoose.connect(url, connectionParams);
 }

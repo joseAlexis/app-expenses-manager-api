@@ -37,7 +37,7 @@ router.get('/id/:value', checkSchema({
     id: {
         in: ['params'],
         errorMessage: 'Missing id',
-        isString: true
+        // isString: true
     }
 }), (req, res) => {
     const errors = validationResult(req);
@@ -102,7 +102,7 @@ router.delete('/', checkSchema({
     id: {
         in: ['body'],
         errorMessage: 'Missing id',
-        isString: true
+        // isString: true
     }
 }), (req, res) => {
     const errors = validationResult(req);

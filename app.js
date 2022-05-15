@@ -1,6 +1,5 @@
 const express = require("express");
 const config = require('./config');
-// const setupExpenses = require('./routes/setupExpenses');
 
 const expensesRouter = require('./routes/expenses');
 const incomesRouter = require('./routes/incomes');
@@ -13,8 +12,7 @@ app.use("/assets", express.static(`${__dirname}/public`));
 app.use("/api/incomes", incomesRouter);
 app.use("/api/expenses", expensesRouter);
 
-
+config.connect();
 app.listen(port);
 
-config.connectDB();
-// setupExpenses(app);
+module.exports = app;
