@@ -2,7 +2,8 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const expensesSchema = new Schema({
-    name: String
+    name: String,
+    budget: Number
 });
 
 const expenses = mongoose.model('Expenses', expensesSchema);

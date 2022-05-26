@@ -10,13 +10,16 @@ router.get('/setup', function (req, res) {
     // Seed DB
     const expensesList = [
         {
-            name: 'Supermarket'
+            name: 'Supermarket',
+            budget: 0
         },
         {
-            name: 'Restaurants'
+            name: 'Restaurants',
+            budget: 0
         },
         {
-            name: 'Transportation'
+            name: 'Transportation',
+            budget: 0
         }
     ];
 
