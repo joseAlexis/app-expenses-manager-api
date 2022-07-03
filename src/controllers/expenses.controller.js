@@ -14,6 +14,9 @@ module.exports.getExpenses = async (req, res) => {
 module.exports.getExpenseById = async (req, res) => {
     try {
         const expense = await Expenses.findById({ _id: req.params.value });
+        if(!expense)
+            return res.status(400).send("Element not found");
+            
         return expense;
     } catch (err) {
         logger.error(err);
